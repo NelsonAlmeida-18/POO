@@ -26,7 +26,6 @@ public class FBFeed{
         }
     }
 
-    //NÃO ESTÁ A CLONAR E VAI DAR MERDA 100%
     public FBFeed(FBFeed feedToPaste){
         this.timeline = feedToPaste.getTimeline();
     }
@@ -112,15 +111,47 @@ public class FBFeed{
 
     // public List<Integer> top5Comments(){
     //     ListIterator<FBPost> iter = this.timeline.listIterator();
-    //     List <Integer> lista = new ArrayList<Integer>();
+    //     ArrayList<FBPost> insertion= new ArrayList<FBPost>();
+
     //     while(iter.hasNext()){
     //         FBPost post = iter.next();
-    //         if(post.getComments())
+    //         while(pos.get)
 
     //     }
     // }
     
+    public boolean equals(Object obj){
+        if (obj==this)
+            return true;
+        
+        if (obj==null || this.getClass()!=obj.getClass())
+            return false;
+
+        FBFeed newfeed = (FBFeed) obj;
+        ListIterator<FBPost> iter = this.timeline.listIterator();
+        while(iter.hasNext()){
+            FBPost post = iter.next();
+            if (!newfeed.getTimeline().contains(post))
+                return false;
+        }
+        return true;
+    }
 
 
+    public String toString(){
+        ListIterator<FBPost> iter = this.timeline.listIterator();
+        StringBuilder sb = new StringBuilder();
+        int pos=0;
+        while(iter.hasNext()){
+            FBPost post = iter.next();
+            sb.append("Post número: ");
+            sb.append(pos);
+            sb.append("\n");
+            sb.append(post.toString());
+            sb.append("\n");
+            pos+=1;
+        }
+        return sb.toString();
+    }
 
 }
