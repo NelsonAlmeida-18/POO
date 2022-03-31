@@ -91,6 +91,12 @@ public class SistemadeSuporte {
         return tech;
     }
 
+    // public String colaboradorTopInt(){
+    //     int maxNumRes=0;
+    //     String tech="";
+    //     this.listaDePedidos.stream().filter();
+    // }
+
     public List<PedidoSuporte> resolvidosExt(LocalDateTime inicio, LocalDateTime fim){
         List<PedidoSuporte> lista = new ArrayList<PedidoSuporte>();
         ListIterator<PedidoSuporte> iter = this.listaDePedidos.listIterator();
