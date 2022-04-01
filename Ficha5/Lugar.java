@@ -1,6 +1,6 @@
 import java.lang.StringBuilder;
 
-public class Lugar extends Parque{
+public class Lugar{
     private String matricula;
     private String nome;
     private int minutos;

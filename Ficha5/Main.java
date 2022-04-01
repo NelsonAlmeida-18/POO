@@ -20,5 +20,8 @@ public class Main {
     
        // SistemaVideos vidSis1 = new SistemaVideos();
 
+       GestaoEncomendas ge = new GestaoEncomendas();
+        System.out.println(ge.todosCodigosEnc());
+
     }
 }
