@@ -20,8 +20,13 @@ public class Main {
     
        // SistemaVideos vidSis1 = new SistemaVideos();
 
-       GestaoEncomendas ge = new GestaoEncomendas();
-        System.out.println(ge.todosCodigosEnc());
+    //    GestaoEncomendas ge = new GestaoEncomendas();
+    //     System.out.println(ge.todosCodigosEnc());
+
+        FBFeedMap newM = new FBFeedMap();
+        newM.addPost("teste", new FBPost());
+        System.out.println(newM.toString());
+
 
     }
 }
